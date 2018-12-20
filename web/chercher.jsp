@@ -19,6 +19,12 @@
                 </div>
 
             </form>
+
+            <% if (request.getAttribute("errorChercher") != null) { %>
+            <div class="alert alert-danger mt-3 mb-3" role="alert">
+                <%= request.getAttribute("errorChercher") %>
+            </div>
+            <% }%>
         </div>
 
         <%
