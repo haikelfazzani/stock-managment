@@ -16,18 +16,17 @@
         %>
         <li style="float: right"><a href="#"><i class="fas fa-shopping-cart"></i> <%= list.size() %></a></li>
         <% }%>
+        
     </ul>
 
     <div class="row mt-3">
 
         <div class="col-4">
             <img class="img-profile mb-3" src="/assets/img/1.png" alt="">
-            <h4><i class="fas fa-user"></i> <%= user.getNom() %> <%= user.getPrenom()%>
-            </h4>
-            <a href="/user/supprimer?email=<%= user.getEmail() %>" class="btn btn-danger mt-3">Supprimer</a>
         </div><!-- /COL-4 -->
 
         <div class="col-8">
+
             <form class="form-profile" action="/user/modifier" method="post">
 
                 <div class="form-group">
@@ -50,7 +49,8 @@
                     <input type="password" name="password" class="form-control" value="<%= user.getPassword() %>">
                 </div>
 
-                <button type="submit" class="btn btn-success">Modifier</button>
+                <button type="submit" class="btn btn-success"><i class="fas fa-pen-square"></i></button>
+                <a href="/user/supprimer?email=<%= user.getEmail() %>" class="btn btn-danger" style="float: right"><i class="fas fa-trash-alt"></i></a>
             </form>
 
             <% if (request.getAttribute("userUpdated") != null) { %>
