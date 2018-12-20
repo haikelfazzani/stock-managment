@@ -38,6 +38,8 @@ public class UserLogin extends HttpServlet {
                     resp.sendRedirect("/profile.jsp");
                 }
             }
+        }else {
+            resp.sendRedirect("/login.jsp");
         }
     }
 }

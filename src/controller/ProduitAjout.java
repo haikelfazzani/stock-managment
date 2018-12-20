@@ -17,7 +17,10 @@ public class ProduitAjout extends HttpServlet {
             throws ServletException, IOException {
 
         String liblle = request.getParameter("libelle");
-        Double prix = Double.parseDouble(request.getParameter("prix"));
+        String prixString = request.getParameter("prix");
+        prixString = prixString.replaceAll("\\s+","");
+
+        Double prix = Double.parseDouble(prixString);
         String categorie = request.getParameter("categorie");
 
         ProduitModel model = new ProduitModel();

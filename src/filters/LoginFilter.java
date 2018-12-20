@@ -16,7 +16,7 @@ public class LoginFilter implements Filter {
         String  email = request.getParameter("email"),
                 password = request.getParameter("password");
 
-        if(email.length() > 0 && password.length() > 0) {
+        if(email.trim().length() > 0 && password.trim().length() > 0) {
             chain.doFilter(req,resp);
         }
         else {

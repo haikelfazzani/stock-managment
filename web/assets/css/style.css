@@ -155,3 +155,6 @@ th { background-color: #ff9800; }
 .table-dark th, .table-dark td, .table-dark thead th {
     border-color: #ffffff;
 }
+
+label {
+    font-weight: bold;}

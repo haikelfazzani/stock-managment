@@ -16,7 +16,7 @@
         %>
         <li style="float: right"><a href="#"><i class="fas fa-shopping-cart"></i> <%= list.size() %></a></li>
         <% }%>
-        
+
     </ul>
 
     <div class="row mt-3">
@@ -45,12 +45,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label>Nouveau mot de pass</label>
+                    <label>Mot de pass</label>
                     <input type="password" name="password" class="form-control" value="<%= user.getPassword() %>">
                 </div>
 
                 <button type="submit" class="btn btn-success"><i class="fas fa-pen-square"></i></button>
-                <a href="/user/supprimer?email=<%= user.getEmail() %>" class="btn btn-danger" style="float: right"><i class="fas fa-trash-alt"></i></a>
+                <a href="/user/supprimer?email=<%= user.getEmail() %>" id="btn-delete" class="btn btn-danger" style="float: right"><i class="fas fa-trash-alt"></i></a>
             </form>
 
             <% if (request.getAttribute("userUpdated") != null) { %>
