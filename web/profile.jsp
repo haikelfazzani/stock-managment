@@ -18,7 +18,7 @@
         <% }%>
     </ul>
 
-    <div class="row">
+    <div class="row mt-3">
 
         <div class="col-4">
             <img class="img-profile mb-3" src="/assets/img/1.png" alt="">

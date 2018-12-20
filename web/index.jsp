@@ -17,7 +17,7 @@
             <div class="row">
 
                 <div class="col-12 mt-4">
-                    <img style="max-width: 100%" src="/assets/img/2.jpg" alt="">
+                    <img style="border: 1px solid #e2e2e2; border-radius: 5px; max-width: 100%" src="/assets/img/2.jpg" alt="">
                     <form class="form-row mt-4 form-search" action="/chercher">
                         <div class="col-10">
                             <input type="text" name="libelle" class="form-control" placeholder="chercher par libelle">

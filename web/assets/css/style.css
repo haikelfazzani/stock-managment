@@ -113,15 +113,11 @@ h3 {
 }
 .row { margin: 0;
     padding: 15px; }
-.form-ajout {
-    background-color: #2c2c2c;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.1),0 1px 17px 0 rgba(0,0,0,0.2)!important;
-}
+
+
 
 table {
+    border-radius: 5px;
     box-shadow: 0 0px 0px 0 rgba(0,0,0,0.1),0 1px 17px 0 rgba(0,0,0,0.2)!important;
 }
 
@@ -141,7 +137,9 @@ th { background-color: #ff9800; }
     border-radius: 5px;
     box-shadow: 0 0px 0px 0 rgba(0,0,0,0.1),0 1px 17px 0 rgba(0,0,0,0.2)!important;
 }
-.img-profile { max-width: 320px; border: 2px solid orange;
+.img-profile {
+    max-width: 320px;
+    border-radius: 5px;
     box-shadow: 0 0px 0px 0 rgba(0,0,0,0.1),0 1px 17px 0 rgba(0,0,0,0.2)!important;
 }
 
@@ -151,8 +149,8 @@ th { background-color: #ff9800; }
 .card-title {     color: #007bff;
     text-transform: uppercase;}
 
-.form-search {
+.form-ajout, .form-search {
     padding: 20px 20px 20px 35px;
     border-radius: 5px;
-    border: 1px solid #f3f3f3;
+    border: 1px solid #e7e7e7;
 }
