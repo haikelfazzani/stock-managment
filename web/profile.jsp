@@ -88,7 +88,7 @@
         </div>
     </div>
 </div>
-<% } %>
+<% }else { response.sendRedirect("/login.jsp");}%>
 </div>
 </div>
 
