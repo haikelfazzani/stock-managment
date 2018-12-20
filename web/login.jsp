@@ -27,6 +27,14 @@
                         <button type="submit" class="btn btn-success">Login</button>
                     </form>
 
+                    <% if (request.getAttribute("champsVid") != null) { %>
+                    <div class="alert alert-danger mt-3 mb-3" role="alert"
+                         style="margin: auto; max-width: 500px;">
+
+                        <%= request.getAttribute("champsVid") %>
+                    </div>
+                    <% }%>
+
                 </div><!-- /COL-12 -->
             </div>
         </div>

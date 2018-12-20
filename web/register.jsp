@@ -32,6 +32,14 @@
                         <button type="submit" class="btn btn-success">Register</button>
                     </form>
 
+                    <% if (request.getAttribute("emptyField") != null) { %>
+                    <div class="alert alert-danger mt-3 mb-3" role="alert"
+                         style="margin: auto; max-width: 500px;">
+
+                        <%= request.getAttribute("emptyField") %>
+                    </div>
+                    <% }%>
+
                 </div><!-- /COL-12 -->
             </div>
         </div>
