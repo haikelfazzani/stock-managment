@@ -10,7 +10,7 @@
                     ArrayList<String> list = (ArrayList<String>) session.getAttribute("produitList");
                     if(list.size() > 0 ) {
                 %>
-                <li style="float: right"><a href="#"><i class="fas fa-shopping-cart"></i> <%= list.size() %></a></li>
+                <li style="float: right"><a href="/profile.jsp"><i class="fas fa-shopping-cart"></i> <%= list.size() %></a></li>
                 <% } } %>
             </ul>
 

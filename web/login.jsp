@@ -20,7 +20,7 @@
                         </div>
 
                         <div class="form-group form-check">
-                            <input type="checkbox" name="beconnected" class="form-check-input" id="exampleCheck1">
+                            <input type="checkbox" name="beconnected" class="form-check-input" id="exampleCheck1" checked>
                             <label class="form-check-label" for="exampleCheck1">il faut cocher avant de presser boutton login</label>
                         </div>
 

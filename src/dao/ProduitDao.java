@@ -72,7 +72,7 @@ public class ProduitDao implements IDao<Produit> {
     @Override
     public Produit getObject(String libelle) {
         Produit p = new Produit();
-        String sql = "SELECT * FROM PRODUIT WHERE LIBELLE = ?";
+        String sql = "SELECT * FROM PRODUIT WHERE LIBELLE = ? LIMIT 1";
         try {
             stmt = conn.prepareStatement(sql);
             stmt.setString(1, libelle);
@@ -83,7 +83,7 @@ public class ProduitDao implements IDao<Produit> {
                 p.setIdProduit(id);
                 p.setLibelle(result.getString(2));
                 p.setPrixUnitaire(result.getDouble(3));
-                p.setCategorie(getCategorieByProduit(id));
+                p.setCategorie(getCategorieByProduit(result.getString(4)));
             }
         }
         catch (Exception ex) {
@@ -102,12 +102,11 @@ public class ProduitDao implements IDao<Produit> {
 
             while (result.next()) {
                 Produit p = new Produit();
-                int id = result.getInt(1);
+                p.setIdProduit(result.getInt(1));
 
-                p.setIdProduit(id);
                 p.setLibelle(result.getString(2));
                 p.setPrixUnitaire(result.getDouble(3));
-                p.setCategorie(getCategorieByProduit(id));
+                p.setCategorie(getCategorieByProduit(result.getString(4)));
 
                 produitList.add(p);
             }
@@ -118,11 +117,12 @@ public class ProduitDao implements IDao<Produit> {
         return produitList;
     }
 
-    public Categorie getCategorieByProduit(int id) {
+    public Categorie getCategorieByProduit(String idCat) {
         Categorie categorie = new Categorie();
-        String sql = "SELECT * FROM CATEGORIE";
+        String sql = "SELECT * FROM CATEGORIE WHERE id_cat = ? LIMIT 1";
         try {
             stmt = conn.prepareStatement(sql);
+            stmt.setString(1, idCat);
             resultSet = stmt.executeQuery();
             while (resultSet.next()) {
                 categorie.setIdCat(resultSet.getString(1));
