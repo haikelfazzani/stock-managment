@@ -1,10 +1,17 @@
 <%@ page import="model.ProduitModel" %>
 <%@ page import="beans.Produit" %>
+<%@ page import="java.util.ArrayList" %>
 <%@include file="/partials/head-nav.jsp"%>
 
         <div class="m-col-9">
             <ul class="nav-top">
-                <li id="btn-close"><a href="#"><i class="fas fa-list-ul"></i> Acceuil</a></li>
+                <li id="btn-close" style="flex: 1;"><a href="#"><i class="fas fa-list-ul"></i> Acceuil</a></li>
+                <% if (session.getAttribute("produitList") != null) {
+                    ArrayList<String> list = (ArrayList<String>) session.getAttribute("produitList");
+                    if(list.size() > 0 ) {
+                %>
+                <li style="float: right"><a href="#"><i class="fas fa-shopping-cart"></i> <%= list.size() %></a></li>
+                <% } } %>
             </ul>
 
             <div class="row">
@@ -18,9 +25,10 @@
                         <!--<img class="card-img-top" src="/assets/img/1.png" alt="Card image cap">-->
                         <div class="card-body">
                             <h5 class="card-title"><%= p.getLibelle() %></h5>
-                            <p class="card-text"><%= p.getPrixUnitaire()%></p>
-                            <p class="card-text"><%= p.getCategorie().getDescription() %></p>
-                            <a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Panier</a>
+                            <p class="card-text"><i class="fas fa-dollar"></i> <%= p.getPrixUnitaire()%></p>
+                            <p class="card-text"><i class="fas fa-pen"></i> <%= p.getCategorie().getDescription() %></p>
+                            <a href="/panier?produit=<%=p.getLibelle()%>" class="btn btn-primary"><i class="fas fa-plus"></i></a>
+                            <a href="/panier?produit=<%=p.getLibelle()%>" style="float: right; margin-top: 5px; color: #FFC107;"><i class="fas fa-star"></i></a>
                         </div>
                     </div>
                 </div><!-- /COL-3 -->
