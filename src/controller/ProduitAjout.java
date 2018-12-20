@@ -21,7 +21,7 @@ public class ProduitAjout extends HttpServlet {
         String categorie = request.getParameter("categorie");
 
         ProduitModel model = new ProduitModel();
-        model.getProduit().setLibelle(liblle);
+        model.getProduit().setLibelle(liblle.toLowerCase().trim());
         model.getProduit().setPrixUnitaire(prix);
         Categorie c = new Categorie();
         c.setIdCat(categorie);

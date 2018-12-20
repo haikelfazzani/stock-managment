@@ -19,6 +19,7 @@ public class ProduitModel {
     public boolean ajouter() { return dao.ajouter(produit); }
     public boolean modifier() { return dao.modifier(libelle, produit); }
     public boolean supprimer() { return dao.supprimer(libelle); }
+    public Produit getProduitByLibelle() { return dao.getObject(libelle); }
     public List<Produit> getProduits() { return dao.getAll(); }
 
     // Getter and setter

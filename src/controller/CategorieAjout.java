@@ -21,7 +21,7 @@ public class CategorieAjout extends HttpServlet {
         String description = request.getParameter("description");
 
         CategorieModel model = new CategorieModel();
-        model.getCategorie().setIdCat(nom);
+        model.getCategorie().setIdCat(nom.toLowerCase().trim());
         model.getCategorie().setDescription(description);
 
         boolean isAdd = model.ajouter();

@@ -19,7 +19,10 @@
         <div class="m-col-3">
 
             <ul class="top-brand">
-                <li><a href="#">Gestion De STOCKS</a></li>
+                <li>
+                    <small style="color: #fff; margin: 0;">Crée par Haikel Fazzani</small>
+                    <a href="#">Gestion De STOCKS</a>
+                </li>
             </ul>
 
             <ul class="nav-left">
@@ -44,7 +47,5 @@
                 <%}%>
 
             </ul>
-
-            <h3>Made By Haikel Fazzani</h3>
 
         </div>

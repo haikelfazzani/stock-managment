@@ -63,8 +63,8 @@
                     </td>
                     <td><%= p.getCategorie().getIdCat() %></td>
                     <td>
-                        <a href="" class="btn btn-success">Modifier</a>
-                        <a href="/produit/supprimer?libelle=<%= p.getLibelle() %>" class="btn btn-danger">Supprimer</a>
+                        <a href="" class="btn btn-success"><i class="fas fa-pen-square"></i></a>
+                        <a href="/produit/supprimer?libelle=<%= p.getLibelle() %>" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
                     </td>
                 </tr>
                 <%} } } %>

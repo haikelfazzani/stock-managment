@@ -70,8 +70,26 @@ public class ProduitDao implements IDao<Produit> {
     }
 
     @Override
-    public Produit getObject(String nom) {
-        return null;
+    public Produit getObject(String libelle) {
+        Produit p = new Produit();
+        String sql = "SELECT * FROM PRODUIT WHERE LIBELLE = ?";
+        try {
+            stmt = conn.prepareStatement(sql);
+            stmt.setString(1, libelle);
+            ResultSet result = stmt.executeQuery();
+
+            while (result.next()) {
+                int id = result.getInt(1);
+                p.setIdProduit(id);
+                p.setLibelle(result.getString(2));
+                p.setPrixUnitaire(result.getDouble(3));
+                p.setCategorie(getCategorieByProduit(id));
+            }
+        }
+        catch (Exception ex) {
+            throw new RuntimeException("no produit found : " , ex);
+        }
+        return p;
     }
 
     @Override

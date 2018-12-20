@@ -79,7 +79,7 @@
                 <tr>
                     <td><%= i++ %></td>
                     <td><%= s %></td>
-                    <td><a href="/panier/supprimer?libelle=<%= s %>">Supprimer</a></td>
+                    <td><a class="btn btn-danger" href="/panier/supprimer?libelle=<%= s %>"><i class="fas fa-trash-alt"></i></a></td>
                 </tr>
                 <%} } }%>
 

@@ -51,7 +51,7 @@
                             <td><%= c.getDescription() %>
                             </td>
                             <td><a class="btn btn-danger"
-                                   href="/categorie/supprimer?id=<%= c.getIdCat() %>">Supprimer</a></td>
+                                   href="/categorie/supprimer?id=<%= c.getIdCat() %>"><i class="fas fa-trash-alt"></i></a></td>
                         </tr>
                         <% } } }%>
                         </tbody>
