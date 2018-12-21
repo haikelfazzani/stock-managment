@@ -25,7 +25,7 @@
                         </div>
                     </form>
 
-                    <h3><i class="fas fa-list-ul"></i> List Des Categories</h3>
+                    <h3 class="mt-3"><i class="fas fa-list-ul"></i> List Des Categories</h3>
                     <table class="table table-dark">
                         <thead>
                         <tr>

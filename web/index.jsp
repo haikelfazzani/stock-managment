@@ -10,7 +10,7 @@
                     ArrayList<String> list = (ArrayList<String>) session.getAttribute("produitList");
                     if(list.size() > 0 ) {
                 %>
-                <li style="float: right"><a href="/profile.jsp"><i class="fas fa-shopping-cart"></i> <%= list.size() %></a></li>
+                <li style="float: right"><a href="/panier.jsp"><i class="fas fa-cart-plus"></i> <%= list.size() %></a></li>
                 <% } } %>
             </ul>
 
@@ -41,9 +41,18 @@
                         <div class="card-body">
                             <h5 class="card-title"><%= p.getLibelle() %></h5>
                             <p class="card-text"><i class="fas fa-hand-holding-usd"></i> <%= p.getPrixUnitaire()%></p>
-                            <p class="card-text"><i class="fas fa-info"></i> <%= p.getCategorie().getDescription() %></p>
-                            <a href="/panier?produit=<%=p.getLibelle()%>" class="btn btn-primary"><i class="fas fa-plus"></i></a>
-                            <a href="/panier?produit=<%=p.getLibelle()%>" style="float: right; margin-top: 5px; color: #FFC107;"><i class="fas fa-star"></i></a>
+                            <p class="card-text"><i class="fas fa-info"></i>
+                                <%= p.getCategorie().getDescription() %>
+                            </p>
+
+                            <a href="/panier?produit=<%=p.getLibelle()%>" class="btn btn-primary">
+                                <i class="fas fa-plus"></i>
+                            </a>
+
+                            <a href="/panier?produit=<%=p.getLibelle()%>" style="float: right; margin-top: 5px; color: #FFC107;">
+                                <i class="fas fa-star"></i>
+                            </a>
+
                         </div>
                     </div>
                 </div><!-- /COL-3 -->

@@ -8,19 +8,21 @@
 %>
 <div class="m-col-9">
     <ul class="nav-top">
-        <li id="btn-close" style="flex: 1;"><a href="#"><i class="fas fa-list-ul"></i> <%= user.getNom() %>
-        </a></li>
+        <li id="btn-close" style="flex: 1;"><a href="#"><i class="fas fa-list-ul"></i> Profile</a></li>
 
         <% if (session.getAttribute("produitList") != null) {
                 ArrayList<String> list = (ArrayList<String>) session.getAttribute("produitList");
         %>
-        <li style="float: right"><a href="#"><i class="fas fa-shopping-cart"></i> <%= list.size() %></a></li>
+        <li style="float: right"><a href="/panier.jsp"><i class="fas fa-shopping-cart"></i> <%= list.size() %></a></li>
         <% }%>
 
     </ul>
 
     <div class="row mt-3">
 
+        <div class="col-12">
+            <h3><i class="fas fa-user"></i> <%= user.getNom() %></h3>
+        </div>
         <div class="col-4">
             <img class="img-profile mb-3" src="/assets/img/1.png" alt="">
         </div><!-- /COL-4 -->
@@ -60,32 +62,6 @@
             <% }%>
         </div>
 
-        <div class="col-12">
-            <h3>Panier</h3>
-            <table class="table table-dark mb-5">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Libelle</th>
-                    <th scope="col">Action</th>
-                </tr>
-                </thead>
-                <tbody>
-                <% if (session.getAttribute("produitList") != null) {
-                    ArrayList<String> list = (ArrayList<String>) session.getAttribute("produitList");
-                    if (list.size() > 0) {
-                        int i = 0;
-                        for (String s : list) {%>
-                <tr>
-                    <td><%= i++ %></td>
-                    <td><%= s %></td>
-                    <td><a class="btn btn-danger" href="/panier/supprimer?libelle=<%= s %>"><i class="fas fa-trash-alt"></i></a></td>
-                </tr>
-                <%} } }%>
-
-                </tbody>
-            </table>
-        </div>
     </div>
 </div>
 <% }else { response.sendRedirect("/login.jsp");}%>

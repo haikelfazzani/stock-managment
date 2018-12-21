@@ -6,7 +6,7 @@
             </ul>
 
             <div class="row mt-5">
-                <div class="col-12">
+                <div class="col-12 mt-3">
 
                     <form action="/user/login" method="post" class="form-auth">
                         <div class="form-group">

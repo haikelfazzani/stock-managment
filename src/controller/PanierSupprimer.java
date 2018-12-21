@@ -1,5 +1,7 @@
 package controller;
 
+import beans.Produit;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -17,11 +19,11 @@ public class PanierSupprimer extends HttpServlet {
 
         HttpSession session = request.getSession();
         String libelle = request.getParameter("libelle");
-        ArrayList<String> produitList = (ArrayList<String>) session.getAttribute("produitList");
+        ArrayList<Produit> produitList = (ArrayList<Produit>) session.getAttribute("produitList");
 
         if(produitList.size() > 0 ){
             for(int i = 0 ; i < produitList.size() ; i++) {
-                if(produitList.get(i).equals(libelle.trim())) {
+                if(produitList.get(i).getLibelle().equals(libelle.trim())) {
                     produitList.remove(i);
                     break;
                 }
@@ -29,6 +31,6 @@ public class PanierSupprimer extends HttpServlet {
         }
 
         session.setAttribute("produitList", produitList);
-        request.getRequestDispatcher("/profile.jsp").forward(request,response);
+        request.getRequestDispatcher("/panier.jsp").forward(request,response);
     }
 }

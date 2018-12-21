@@ -21,7 +21,7 @@
             <ul class="top-brand">
                 <li>
                     <small style="color: #fff; margin: 0;">Crée par Haikel Fazzani</small>
-                    <a href="#">Gestion De STOCKS</a>
+                    <a style="padding: 0;" href="#">Gestion De STOCKS</a>
                 </li>
             </ul>
 

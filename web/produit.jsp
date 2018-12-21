@@ -42,7 +42,7 @@
                 Produit p = (Produit)request.getAttribute("produitByLibelle"); %>
 
             <h3><i class="fas fa-pen-square"></i> Modifier</h3>
-            <form action="/produit/modifier" method="post" class="form-row form-ajout">
+            <form action="/produit/modifier" method="post" class="form-row form-ajout mb-5">
                 <div class="col">
                     <input type="text" name="libelle" value="<%= p.getLibelle() %>" class="form-control" placeholder="Libelle">
                 </div>

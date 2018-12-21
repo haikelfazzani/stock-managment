@@ -1,5 +1,8 @@
 package controller;
 
+import beans.Produit;
+import model.ProduitModel;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,16 +19,21 @@ public class PanierServlet extends HttpServlet {
             throws ServletException, IOException {
 
         String produit = request.getParameter("produit");
-        ArrayList<String> produitList = new ArrayList<>();
+
+        ProduitModel model = new ProduitModel();
+        model.setLibelle(produit);
+        Produit p = model.getProduitByLibelle();
+
+        ArrayList<Produit> produitList = new ArrayList<>();
 
         HttpSession session = request.getSession();
 
         if(session.getAttribute("produitList") != null) {
-            produitList = (ArrayList<String>) session.getAttribute("produitList");
-            produitList.add(produit);
+            produitList = (ArrayList<Produit>) session.getAttribute("produitList");
+            produitList.add(p);
         }
         else {
-            produitList.add(produit);
+            produitList.add(p);
             session.setAttribute("produitList", produitList);
         }
         session.setAttribute("produitList", produitList);
