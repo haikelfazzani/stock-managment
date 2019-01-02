@@ -84,12 +84,12 @@ body { margin: 0; background-color: #f5f5f5; }
 
     .nav-top li a {
         font-size: 22px;
-        color: #6a696a;
+        color: #ff9800;
         transition: all 0.2s ease;
     }
 
     .nav-top li a:hover {
-        color: #ff9800;
+        color: #6a696a;
     }
 
 
@@ -163,4 +163,4 @@ th { background-color: #ffffff; color: #000000; }
 label {
     font-weight: bold;}
 
-form .btn-success {     background-color: #FF9800; border: 1px solid #ff9800; }
+.btn-secondary, form .btn-success {     background-color: #FF9800; border: 1px solid #ff9800; }

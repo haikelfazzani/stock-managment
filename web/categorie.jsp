@@ -1,13 +1,16 @@
 <%@ page import="java.util.List" %>
 <%@ page import="beans.Categorie" %>
 
-
 <%@include file="/partials/head-nav.jsp"%>
 
         <div class="m-col-9">
             <ul class="nav-top">
                 <li id="btn-close"><a href="#"><i class="fas fa-list-ul"></i> Categorie</a></li>
             </ul>
+
+            <% if(session.getAttribute("user") != null) {
+                User user = (User) session.getAttribute("user");
+                if(user.getNom().equals("admin")) {%>
 
             <div class="row">
                 <div class="col-12 mt-3">
@@ -65,6 +68,8 @@
                 </div>
             </div>
         </div>
+
+<% }else { response.sendRedirect("/index.jsp"); } }else { response.sendRedirect("/index.jsp"); }%>
 
     </div>
 </div>

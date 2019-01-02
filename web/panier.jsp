@@ -25,7 +25,8 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Libelle</th>
-                    <th scope="col">Pirx unitiare</th>
+                    <th scope="col">Prix unitiare</th>
+                    <th scope="col">Categorie</th>
                     <th scope="col">Action</th>
                 </tr>
                 </thead>
@@ -33,9 +34,10 @@
                 <%  int i = 0;
                     for (Produit p : list) {%>
                 <tr>
-                    <td><%= i++ %></td>
+                    <td><%= ++i %></td>
                     <td><%= p.getLibelle() %></td>
                     <td><%= p.getPrixUnitaire() %></td>
+                    <td><%= p.getCategorie().getIdCat() %></td>
                     <td><a class="btn btn-danger" href="/panier/supprimer?libelle=<%= p.getLibelle() %>">
                         <i class="fas fa-trash-alt"></i></a>
                     </td>

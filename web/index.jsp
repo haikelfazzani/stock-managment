@@ -5,7 +5,7 @@
 
         <div class="m-col-9">
             <ul class="nav-top">
-                <li id="btn-close" style="flex: 1;"><a href="#"><i class="fas fa-list-ul"></i> Acceuil</a></li>
+                <li id="btn-close" style="flex: 1;"><a href="#"><i class="fas fa-list-ul"></i> Home</a></li>
                 <% if (session.getAttribute("produitList") != null) {
                     ArrayList<String> list = (ArrayList<String>) session.getAttribute("produitList");
                     if(list.size() > 0 ) {
@@ -20,11 +20,11 @@
                     <!--<img style="border: 1px solid #e2e2e2; border-radius: 5px; max-width: 100%" src="/assets/img/2.jpg" alt="">-->
                     <form class="form-row mt-4 form-search" action="/chercher">
                         <div class="col-10">
-                            <input type="text" name="libelle" class="form-control" placeholder="chercher par libelle">
+                            <input type="text" name="libelle" class="form-control" placeholder="seach ..">
                         </div>
 
                         <div class="col-2">
-                            <button type="submit" class="btn btn-success"><i class="fas fa-search"></i> CHERCHER</button>
+                            <button type="submit" class="btn btn-success"><i class="fas fa-search"></i> SEARCH</button>
                         </div>
 
                     </form>
@@ -45,7 +45,7 @@
                                 <%= p.getCategorie().getDescription() %>
                             </p>
 
-                            <a href="/panier?produit=<%=p.getLibelle()%>" class="btn btn-primary">
+                            <a href="/panier?produit=<%=p.getLibelle()%>" class="btn btn-secondary">
                                 <i class="fas fa-plus"></i>
                             </a>
 

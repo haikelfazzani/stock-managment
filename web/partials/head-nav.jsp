@@ -20,20 +20,20 @@
 
             <ul class="top-brand">
                 <li>
-                    <small style="color: #fff; margin: 0;">Crée par Haikel Fazzani</small>
-                    <a style="padding: 0;" href="#"><i class="fas fa-luggage-cart"></i> Gestion De STOCKS</a>
+                    <small style="color: #fff; margin: 0;">Created by Haikel Fazzani</small>
+                    <a style="padding: 0;" href="/index.jsp"><i class="fas fa-luggage-cart"></i> Stock Management</a>
                 </li>
             </ul>
 
             <ul class="nav-left">
-                <li><a href="/index.jsp"><i class="fas fa-home"></i> Acceuil</a></li>
+                <li><a href="/index.jsp"><i class="fas fa-home"></i> Home</a></li>
 
                 <% if(session.getAttribute("user") != null) {
                     User user = (User) session.getAttribute("user");
                     if(user.getNom().equals("admin")) {%>
 
-                <li><a href="/produit/lister"><i class="fab fa-product-hunt"></i> Produit</a></li>
-                <li><a href="/categorie/lister"><i class="fas fa-draw-polygon"></i> Categorie</a></li>
+                <li><a href="/produit/lister"><i class="fab fa-product-hunt"></i> Products</a></li>
+                <li><a href="/categorie/lister"><i class="fas fa-draw-polygon"></i> Categories</a></li>
                 <%    } }%>
 
                 <% if(session.getAttribute("user") != null) {%>

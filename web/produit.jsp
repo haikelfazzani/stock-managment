@@ -8,6 +8,9 @@
         <li id="btn-close"><a href="#"><i class="fas fa-list-ul"></i> Produits</a></li>
     </ul>
 
+    <% if(session.getAttribute("user") != null) {
+        User user = (User) session.getAttribute("user");
+        if(user.getNom().equals("admin")) {%>
     <div class="row">
         <div class="col-12 mt-3 mb-5">
             <h3><i class="fas fa-address-card"></i> Ajouter un produit</h3>
@@ -113,6 +116,9 @@
 
         </div><!-- /COL-12 -->
     </div>
+
+    <% }else { response.sendRedirect("/index.jsp"); } }else { response.sendRedirect("/index.jsp"); }%>
+
 </div>
 
 </div>

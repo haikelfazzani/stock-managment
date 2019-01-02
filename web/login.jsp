@@ -24,7 +24,7 @@
                             <label class="form-check-label" for="exampleCheck1">il faut cocher avant de presser boutton login</label>
                         </div>
 
-                        <button type="submit" class="btn btn-success">Login</button>
+                        <button type="submit" class="btn btn-success btn-block">Login</button>
                     </form>
 
                     <% if (request.getAttribute("champsVid") != null) { %>

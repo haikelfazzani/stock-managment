@@ -20,8 +20,8 @@ public class ChercherServlet extends HttpServlet {
 
         ProduitModel model = new ProduitModel();
         model.setLibelle(libelle.toLowerCase().trim());
-        Produit p = model.getProduitByLibelle();
 
+        Produit p = model.getProduitByLibelle();
         request.setAttribute("produit" , p);
         request.getRequestDispatcher("/chercher.jsp").forward(request,response);
     }

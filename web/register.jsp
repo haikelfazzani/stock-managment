@@ -29,7 +29,7 @@
                             <input type="password" name="password" class="form-control" placeholder="Entrer Password">
                         </div>
 
-                        <button type="submit" class="btn btn-success">Register</button>
+                        <button type="submit" class="btn btn-success btn-block">Register</button>
                     </form>
 
                     <% if (request.getAttribute("emptyField") != null) { %>

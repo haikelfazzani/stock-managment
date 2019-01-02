@@ -36,6 +36,9 @@ public class PanierServlet extends HttpServlet {
             produitList.add(p);
             session.setAttribute("produitList", produitList);
         }
+
+
+
         session.setAttribute("produitList", produitList);
         request.getRequestDispatcher("/index.jsp").forward(request,response);
     }
