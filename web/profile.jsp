@@ -8,7 +8,7 @@
     if (session.getAttribute("user") != null) {
         User user = (User) session.getAttribute("user");
 %>
-<div class="m-col-9">
+<div class="m-col-9 mt-5">
     <ul class="nav-top">
         <li id="btn-close" style="flex: 1;"><a href="#"><i class="fas fa-list-ul"></i> Profile</a></li>
 

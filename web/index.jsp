@@ -35,7 +35,7 @@
                     if(model.getProduits().size() > 0) {
                         for(Produit p : model.getProduits()) {%>
 
-                <div class="col-3 mb-5 mt-3">
+                <div class="col-md-3 mb-5 mt-3">
                     <div class="card">
                         <!--<img class="card-img-top" src="/assets/img/1.png" alt="Card image cap">-->
                         <div class="card-body">
